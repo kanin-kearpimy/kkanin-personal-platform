@@ -6,7 +6,7 @@ const Index: React.FC<PageProps<any>> = () => {
     return (
         <Layout>
             <div>
-                Hello KKANIN.com
+                Hello KKANIN.com. See you tomorrow for my website!
             </div>
         </Layout>
     )
