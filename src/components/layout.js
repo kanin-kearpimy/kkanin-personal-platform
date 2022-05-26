@@ -7,19 +7,20 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
+import MainNavbar from "./man-navbar";
+// import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import "./layout.css"
+import "../styles/layout.css"
 
 const Layout = ({ children }) => {
     return (
-        <>
-            <header>Header</header>
+        <div className="h-screen flex flex-col gap-y-8 bg-[#EEEEEE]">
+            <MainNavbar />
+            <Header />
             <main className="container mx-auto">
                 { children }
             </main>
-        </>
+        </div>
     )
 }
 
