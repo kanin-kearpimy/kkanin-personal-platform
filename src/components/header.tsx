@@ -1,5 +1,18 @@
 import * as React from "react"
-import ProfilePicture from '../images/profile-picture.jpeg'
+// @ts-ignore
+import ProfilePicture from "../images/profile-picture.jpeg"
+
+const skillBadges = ['javascript', 'typescript', 'php', 'python', 'nodejs', 'html/css', 'system design', 'consulting', 'communication', 'facilitation']
+
+type SkillBadgeProps = {
+    skill: string
+}
+
+const SkillBadge = ({ skill }: SkillBadgeProps) => {
+    return (
+        <span className="rounded-md px-2 text-white bg-[#187498]">#{ skill }</span>
+    )
+}
 
 const Header = () => {
     return (
@@ -16,6 +29,15 @@ const Header = () => {
                         I also interested in machine learning and AI, strong communication and presentation skills.
                         Social impact and community building are another addicted to me.
                     </p>
+                    <div id="skill-badge" className="flex flex-row gap-2 flex-wrap">
+                        {skillBadges.map(skill => {
+                            return (
+                                <SkillBadge
+                                    skill={skill}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </header>
