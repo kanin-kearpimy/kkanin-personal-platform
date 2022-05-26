@@ -1,9 +1,10 @@
 :root {
   --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
-  --color-code-bg: #fff4db;
+  --color-text: #666666;
+  --color-primary: #000000;
+  --color-code-bg: #EEEEEE;
   --color-code: #8a6534;
+  --color-primary-hover: #666666;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -28,7 +29,6 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font: sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
@@ -48,14 +48,15 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
 }
 a:active,
 a:hover {
-  outline-width: 0;
-  text-decoration: none;
+  color: var(--color-primary-hover);
+  font-weight: 600;
+  text-underline-offset: 8px;
+  text-decoration: underline;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -72,7 +73,6 @@ dfn {
 }
 h1 {
   margin: 0;
-  margin-bottom: 3rem;
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
