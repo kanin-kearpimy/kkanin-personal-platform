@@ -14,7 +14,7 @@ import "../styles/layout.css"
 
 const Layout = ({ children }) => {
     return (
-        <div className="h-screen flex flex-col gap-y-8 bg-[#EEEEEE]">
+        <div className="h-screen flex flex-col gap-y-8">
             <MainNavbar />
             <Header />
             <main className="container mx-auto">

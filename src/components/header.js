@@ -3,7 +3,7 @@ import ProfilePicture from '../images/profile-picture.jpeg'
 
 const Header = () => {
     return (
-        <header className="mx-auto w-3/5">
+        <header className="mx-auto p-4 md:w-3/5">
             <h5>Hi everyone, Nice to meet you!</h5>
             <span className="text-3xl md:text-7xl">Let call me James!</span>
             <h2 className="text-xl md:text-3xl">Kanin Kearpimy, Thailand</h2>
