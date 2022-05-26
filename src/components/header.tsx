@@ -4,8 +4,32 @@ import ProfilePicture from "../images/profile-picture.jpeg"
 
 const skillBadges = ['javascript', 'typescript', 'php', 'python', 'nodejs', 'html/css', 'system design', 'consulting', 'communication', 'facilitation']
 
+const socials: socialType[] = [
+    {
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/kanin-kearpimy-48a2b2165/',
+        css: 'bg-[#0072b1]'
+    },
+    {
+        name: 'Twitter',
+        link: 'https://twitter.com/home',
+        css: 'bg-[#00acee]'
+    },
+    {
+        name: 'Email',
+        link: 'mailto:kanin.kearpimy@gmail.com',
+        css: 'bg-[#CCCCCC]'
+    }
+]
+
 type SkillBadgeProps = {
     skill: string
+}
+
+type socialType = {
+    name: string
+    link: string
+    css: string
 }
 
 const SkillBadge = ({ skill }: SkillBadgeProps) => {
@@ -21,7 +45,16 @@ const Header = () => {
             <span className="text-3xl md:text-7xl">Let call me James!</span>
             <h2 className="text-xl md:text-3xl">Kanin Kearpimy, Thailand</h2>
             <div className="flex flex-col md:flex-row gap-x-4 mt-8">
-                <img className="md:w-1/4 rounded-md border-1-black" src={ProfilePicture} alt="profile-picture-james" />
+                <div className="md:w-1/4 flex flex-col gap-1">
+                    <img className="rounded-md border-1-black" src={ProfilePicture} alt="profile-picture-james" />
+                    {socials.map(social => {
+                        return (
+                            <a href={social.link}
+                               className={`${social.css} p-2 text-center text-white rounded-md`}
+                            >{social.name}</a>
+                        )
+                    })}
+                </div>
                 <div className="md:w-3/4">
                     <p className="text-lg">
                         I'm Software Engineer who passionate in building digital platform, data pipeline, and resolving social issue.

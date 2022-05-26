@@ -61,15 +61,15 @@ const WorkExperience = () => {
     const [selectedExperience, setExperience] = useState<experienceType>(experiences[0])
 
     return (
-        <div className="grid grid-cols-3 w-3/4 mx-auto mt-8 min-h-[320px]">
-            <ul className="border-[#000000] border-r pr-4 mr-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-3/4 mx-auto mt-8 min-h-[320px]">
+            <ul className="border-[#000000] md:border-r pr-4 mr-4">
                 {experiences.map(exp => {
                     return (
-                        <li className="cursor-pointer hover:underline" onClick={() => setExperience(exp)}>{ exp.title }</li>
+                        <li className={`${selectedExperience.title === exp.title ? 'underline' : ''} cursor-pointer hover:underline`} onClick={() => setExperience(exp)}>{ exp.title }</li>
                     )
                 })}
             </ul>
-            <div className="col-span-2">
+            <div className="md:col-span-2">
                 <h4>{selectedExperience.title} <b>@{selectedExperience.place}</b></h4>
                 <h5>{selectedExperience.duration}</h5>
                 <ul>
